@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .d1 .box{
+            display: flex;
+            height: 300px;
+            border: 1px solid #000;
+        }
+        .d1 .box div{
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+        }
+        .d2 .box2{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            height: 300px;
+            /* border: 1px solid #000; */
+        }
+        .d2 .box2 div{
+            margin: 10px;
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+        }
+
+    </style>
+</head>
+<body>
+    <h2>弹性盒子换行</h2>
+    <p>弹性盒子可以自动挤压和拉伸，默认情况下，所有的弹性盒子都在一行显示</p>
+    <p>属性名： flex-wrap</p>
+    <p>属性值： wrap 换行  nowrap 不换行（默认模式）</p>
+    <p>示例如下：</p>
+    <p>nowrap 强制压缩 在一行显示</p>
+    <div class="d1">
+        <div class="box">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>0</div>
+        </div>
+    <p>wrap 换行</p>    
+    </div>
+    <div class="d2">
+        <div class="box2">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>0</div>
+        </div>
+    </div>
+</body>
+</html>

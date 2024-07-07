@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        th{
+            background-color: gray;
+        }
+        tr:nth-child(2n+1){
+            background-color: rgb(224, 190, 190);
+        }
+        .d1 .box1{
+            display: flex;
+            /* 必须设置 wrap 否则不生效 */
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-content: flex-start;
+            height: 400px;
+            width: 50%;
+            border: 1px solid #000;
+            margin-top: 80px;
+        }
+        .d1 .box1 div{
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+        }
+
+
+        .d2 .box2{
+            display: flex;
+            /* 必须设置 wrap 否则不生效 */
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-content: flex-end;
+            height: 400px;
+            width: 50%;
+            border: 1px solid #000;
+            margin-top: 80px;
+        }
+        .d2 .box2 div{
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+        }
+
+
+        .d3 .box3{
+            display: flex;
+            /* 必须设置 wrap 否则不生效 */
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-content: center;
+            height: 400px;
+            width: 50%;
+            border: 1px solid #000;
+            margin-top: 80px;
+        }
+        .d3 .box3 div{
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+        }
+
+
+        .d4 .box4{
+            display: flex;
+            /* 必须设置 wrap 否则不生效 */
+            flex-wrap: wrap;
+            justify-content: space-between;
+            /* 以 多行 为整体 对行与行 行与父级边框 之间给予间距 */
+            align-content: space-around;
+            height: 400px;
+            width: 50%;
+            border: 1px solid #000;
+            margin-top: 80px;
+        }
+        .d4 .box4 div{
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+        }
+
+
+        .d5 .box5{
+            display: flex;
+            /* 必须设置 wrap 否则不生效 */
+            flex-wrap: wrap;
+            /* 以每一个弹性盒子为个体 给予间距 */
+            justify-content: space-between;
+            /* 以 多行 为整体 对行与行之间给予间距 */
+            align-content: space-between;
+            height: 400px;
+            width: 50%;
+            border: 1px solid #000;
+            margin-top: 80px;
+        }
+        .d5 .box5 div{
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+        }
+
+
+        .d6 .box6{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            /* 必须设置 wrap 否则不生效 */
+            align-content: space-evenly;
+            height: 400px;
+            width: 50%;
+            border: 1px solid #000;
+            margin-top: 80px;
+        }
+        .d6 .box6 div{
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <h2>行对齐方式</h2>
+    <p>属性名： align-content</p>
+    <p>属性值：</p>
+    <table border="1.5">
+        <tr>
+            <th>属性值</th>
+            <th>效果</th>
+        </tr>
+        <tr>
+            <td>flex-start</td>
+            <td>默认值，弹性盒子从起始点开始依次排列</td>
+        </tr>
+        <tr>
+            <td>flex-end</td>
+            <td>弹性盒子从终点开始依次排列</td>
+        </tr>
+        <tr>
+            <td>center</td>
+            <td>弹性盒子沿着主轴居中排列</td>
+        </tr>
+        <tr>
+            <td>space-between</td>
+            <td>弹性盒子沿着主轴方向均匀排列，空白间距均分在弹性盒子之间（以 多行 为整体 对 行与行 之间给予间距）</td>
+        </tr>
+        <tr>
+            <td>space-around</td>
+            <td>弹性盒子沿着主轴均匀排列，空白间距均分在弹性盒子两侧 （以 多行 为整体 对 行与行 行与父级边框 之间给予间距）</td>
+        </tr>
+        <tr>
+            <td>space-evenly</td>
+            <td>弹性盒子沿着主轴均匀排列，弹性盒子与容器之间间距相等（必须设置wrap 不然不生效）</td>
+        </tr>
+    </table>
+    <p>示例如下：</p>
+    <div class="d1">
+        <div class="box1">
+            <div>1 flex start</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+        </div>
+    </div>
+    <div class="d2">
+        <div class="box2">
+            <div>1 flex end</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+
+        </div>
+    </div>
+    <div class="d3">
+        <div class="box3">
+            <div>1 center</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+
+        </div>
+    </div>
+    <div class="d4">
+        <div class="box4">
+            <div>1 around</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+
+        </div>
+    </div>
+    <div class="d5">
+        <div class="box5">
+            <div>1 between</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+
+        </div>
+    </div>
+    <div class="d6">
+        <div class="box6">
+            <div>1 evenly</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+
+        </div>
+    </div>
+</body>
+</html>

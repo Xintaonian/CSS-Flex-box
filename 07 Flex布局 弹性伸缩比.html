@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 默认情况下，主轴方向的尺寸开内容撑开，侧轴默认为拉伸 */
+        .box{
+            display: flex;
+            height: 300px;
+            border: 1px solid #000;
+        }
+        .box div:nth-child(1){
+            background-color: pink;
+            width: 200px;
+        }
+        /* 父级容器-div1 的面积 所剩下的尺寸被分为3份 div2 占其中的一份 */
+        .box div:nth-child(2){
+            background-color: blue;
+            flex: 1;
+        }
+        /* 父级容器-div1 的面积 所剩下的尺寸被分为3份 div2 占其中的两份 */
+        .box div:nth-child(3){
+            background-color: red;
+            flex: 2;
+        }
+    </style>
+</head>
+<body>
+     <h2>弹性伸缩比</h2>
+     <p>作用： 控制弹性盒子的主轴方向的尺寸。</p>
+     <p>属性名： flex</p>
+     <p>属性值： 整数数字，表示占用父级剩余尺寸的分数</p>
+     <p>默认情况下 主轴方向的尺寸靠内容撑开，侧轴默认为拉伸</p>
+     <div class="box">
+        <div>1、设置宽度</div>
+        <div>2、 父级容器 减去 div1 的面积 所剩下的尺寸被分为3份 div2 占其中的一份</div>
+        <div>3、 父级容器 减去 div1 的面积 所剩下的尺寸被分为3份 div3 占其中的两份</div>
+     </div>
+</body>
+</html>

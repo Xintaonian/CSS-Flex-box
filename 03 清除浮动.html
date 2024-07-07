@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .top{
+            margin:10px auto;
+            width: 1200px;
+            /* height: 300px; */
+            background-color: pink;
+        }
+        .left{
+            width: 200px;
+            height: 300px;
+            background-color: skyblue;
+            float: left;
+        }
+        .right{
+            width: 950px;
+            height: 300px;
+            background-color: orange;
+            float: right;
+        }
+        .bottom{
+            height: 100px;
+            background-color: brown;
+        }
+        .d1 .clearfix{
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h3>清除浮动</h3>
+        <p>场景：浮动的元素会脱标， 如果父级没有高度， 子级无法撑开父级的高度（可能导致页面布局错乱）</p>
+        <p>解决方法：清楚浮动（清除浮动带来的影响）</p>
+        <p>示例如下：</p>
+        <div class="top">
+            <div class="left"></div>
+            <div class="right"></div>
+        </div>
+        <div class="bottom"></div>
+    </div>
+
+    <div class="d1">
+        <h4>方法一： 额外标签发</h4>
+        <p>在父级元素的内容最后添加一个块级元素，设置CSS属性 clear：both</p>
+        <p>示例如下：</p>
+        <div class="top">
+            <div class="left"></div>
+            <div class="right"></div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="bottom"></div>
+        </div> 
+        <h4>方法二： 单伪元素法</h4>
+        <p>在父级元素的内容最后添加一个块级元素，添加：：after 属性 （）content：“” ； display: block; clear：both</p>
+        <img src="pic/单位元素.png" width="200">
+        <h4>方法三： 双伪元素法（推荐）</h4>
+        <img src="pic/双为元素.png" width="200">
+        <h4>方法四： overflow</h4>
+        <p>父元素添加CSS属性 overflow：hidden</p>
+</body>
+</html>

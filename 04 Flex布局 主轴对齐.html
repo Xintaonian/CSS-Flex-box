@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            /* 给父级元素设置display：flex  父级以成为弹性容器 box123 变为弹性盒子 */
+            display: flex;
+            justify-content: space-between;
+            
+            height: 300px;
+            border: 1px solid #000;
+        }
+        /* 弹性盒子：沿着主轴排列 */
+        .box div{
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+        }
+        th{
+            background-color: gray;
+        }
+        /* flex start */
+        .box1{
+            display: flex;
+            /* default set */
+            justify-content: start;
+            height: 300px;
+            border: 1px solid #000;
+        }
+        .box1 div{
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+        }
+        /* flex end */
+        .box2{
+            display: flex;
+            justify-content: end;
+            height: 300px;
+            border: 1px solid #000;
+        }
+        .box2 div{
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+        }
+        /* flex center */
+        .box3{
+            display: flex;
+            justify-content: center;
+            height: 300px;
+            border: 1px solid #000;
+        }
+        .box3 div{
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+        }
+        /* space-between */
+        .box4{
+            display: flex;
+            justify-content: space-between;
+            height: 300px;
+            border: 1px solid #000;
+        }
+        .box4 div{
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+        }
+        /* space-around */
+        .box5{
+            display: flex;
+            justify-content: space-around;
+            height: 300px;
+            border: 1px solid #000;
+        }
+        .box5 div{
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+        }
+        /* space-evenly */
+        .box6{
+            display: flex;
+            justify-content: space-evenly;
+            height: 300px;
+            border: 1px solid #000;
+        }
+        .box6 div{
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+        }
+        a{
+            display: inline-block;
+            margin: 20px;
+            text-decoration: none;
+            
+        }
+    </style>
+</head>
+<body>
+    <h2>Flex 布局</h2>
+    <p>Flex布局也叫做弹性布局，是浏览器提倡的布局模型，发i尝试和结构化布局，提供了强大的空间分布和对齐能力。</p>
+    <p>Flex模型不会产生浮动布局中的脱标现象，布局网页更加简单和灵活。</p>
+    <p>示例如下：</p>
+    <div class="box">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <h2>Flex - 组成</h2>
+    <p>设置方式： 给父元素设置 display: flex,  子元素可以自动挤压或拉伸</p>
+    <p>组成部分：</p>
+    <ul>
+        <li>弹性容器</li>
+        <li>弹性盒子</li>
+        <li>主轴：默认为水平方向</li>
+        <li>侧轴/交叉轴：默认为垂直方向</li>
+    </ul>
+    <h2>主轴对齐方式</h2>
+    <h4>属性值：justfiy - content</h4>
+    <table border="1.5">
+        <tr>
+            <th>属性值</th>
+            <th>效果</th>
+        </tr>
+        <tr>
+            <td>flex-start</td>
+            <td>默认值，弹性盒子从起始点开始依次排列</td>
+        </tr>
+        <tr>
+            <td>flex-end</td>
+            <td>弹性盒子从终点开始依次排列</td>
+        </tr>
+        <tr>
+            <td>center</td>
+            <td>弹性盒子沿着主轴居中排列</td>
+        </tr>
+        <tr>
+            <td>space-between</td>
+            <td>弹性盒子沿着主轴方向均匀排列，空白间距均分在弹性盒子之间</td>
+        </tr>
+        <tr>
+            <td>space-around</td>
+            <td>弹性盒子沿着主轴均匀排列，空白间距均分在弹性盒子两侧</td>
+        </tr>
+        <tr>
+            <td>space-evenly</td>
+            <td>弹性盒子沿着主轴均匀排列，弹性盒子与容器之间间距相等</td>
+        </tr>
+    </table>
+    <br>
+    <h3>示例如下：</h3>
+    <h4>flex-start 例子：</h4>
+    <div class="box1">
+        <div>flex-start</div>
+        <div>flex-start</div>
+        <div>flex-start</div>
+    </div>
+    <h4>flex-end 例子：</h4>
+    <div class="box2">
+        <div>flex-end</div>
+        <div>flex-end</div>
+        <div>flex-end</div>
+    </div>
+    <h4>flex-center 例子：</h4>
+    <div class="box3">
+        <div>flex-center</div>
+        <div>flex-center</div>
+        <div>flex-center</div>
+    </div>
+    <h4>space-between 例子：</h4>
+    <div class="box4">
+        <div>space-between</div>
+        <div>space-between</div>
+        <div>space-between</div>
+    </div>
+    <p>父级剩余间距的尺寸平均分不到间距</p>
+    <p>弹性盒子之间的间距相等</p>
+    <h4>space-around 例子：</h4>
+    <div class="box5">
+        <div>space-around</div>
+        <div>space-around</div>
+        <div>space-around</div>
+    </div>
+    <p>间距产生在两侧，弹性盒子之间间距是弹性盒子与父级边框间距的两倍</p>
+    <h4>space-evenly 例子：</h4>
+    <div class="box6">
+        <div>space-evenly</div>
+        <div>space-evenly</div>
+        <div>space-evenly</div>
+    </div>
+    <p>间距产生在两侧，弹性盒子之间间距是弹性盒子与父级边框间距完全相等</p>
+    <br>
+    <a href="05 Flex布局 侧轴（交叉轴）对齐方式.html" target="_blank">侧轴对齐</a>
+    <a href="06 Flex布局 修改主轴方向.html" target="_blank">修改主轴方向</a>
+    <a href="07 Flex布局 弹性伸缩比.html" target="_blank">弹性伸缩比</a>
+    <a href="08 Flex布局 弹性换行.html" target="_blank">弹性换行</a>
+    <a href="09 Flex布局 行对齐方式.html" target="_blank">行对齐方式</a>
+    
+    
+
+
+</body>
+</html>

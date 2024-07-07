@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        th{
+            background-color: gray;
+        }
+        tr:nth-child(2n+1){
+            background-color: rgb(204, 192, 192);
+        }
+        p{
+            margin-top: 50px;
+        }
+        .box1{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 150px;
+            height: 150px;
+            background-color: pink;
+            margin-top: 25px;
+        }
+    </style>
+</head>
+<body>
+    <h2>修改主轴方向</h2>
+    <p>主轴默认在水平方向，侧轴默认在垂直方向</p>
+    <p>属性名： flex-direction</p>
+    <p>属性值：</p>
+    <table border="1.5">
+        <tr>
+            <th>属性值</th>
+            <th>效果</th>
+        </tr>
+        <tr>
+            <td>row</td>
+            <td>水平方向 从左向右（默认）</td>
+        </tr>
+        <tr>
+            <td>column</td>
+            <td>垂直方向 从上向下</td>
+        </tr>
+        <tr>
+            <td>row-reverse</td>
+            <td>水平放向 从右向左</td>
+        </tr>
+        <tr>
+            <td>column-reverse</td>
+            <td>垂直方向 从下向上</td>
+        </tr>
+    </table>
+    <p>display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;</p>
+    <div class="box1">
+        <img src="pic/star3.png" width="50">
+        <span>星星</span>
+    </div>
+</body>
+</html>

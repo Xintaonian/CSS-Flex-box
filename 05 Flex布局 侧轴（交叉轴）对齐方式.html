@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        th{
+            background-color: gray;
+        }
+        .box1{
+            display: flex;
+            align-items: stretch;
+            /* 如果有高度设置 则 stretch 不生效 */
+            /* height: 300px; */
+            border: 1px solid #000;
+        }
+        .box1 div{
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+        }
+        .box2{
+            display: flex;
+            align-items: center;
+            height: 300px;
+            border: 1px solid #000;
+        }
+        .box2 div{
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+        }
+        .box3{
+            display: flex;
+            align-items: flex-start;
+            height: 300px;
+            border: 1px solid #000;
+        }
+        .box3 div{
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+        }
+
+        .box4{
+            display: flex;
+            align-items: flex-end;
+            height: 300px;
+            border: 1px solid #000;
+        }
+        .box4 div{
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+        }
+        .box4 .d1{
+            align-self: center;
+        }
+
+    </style>
+</head>
+<body>
+    <h2>侧轴对齐方式：</h2>
+    <h4>属性名</h4>
+    <p>align-items：当前弹性容器内所有的弹性盒子的侧轴对齐（给弹性容器设置）</p>
+    <p>align-self：单独控制某个弹性盒子的侧轴对齐方式（给弹性盒子设置）</p>
+    <table border="1.5">
+        <tr>
+            <th>属性值</th>
+            <th>效果</th>
+        </tr>
+        <tr>
+            <td>stretch（常用）</td>
+            <td>弹性盒子沿着侧轴被拉伸至铺满整个容器（弹性盒子没有设置侧轴方向尺寸则默认拉伸）</td>
+        </tr>
+        <tr>
+            <td>center（常用）</td>
+            <td>弹性盒子沿着侧轴剧中</td>
+        </tr>
+        <tr>
+            <td>flext-start</td>
+            <td>弹性盒子从起点开始依次排列</td>
+        </tr>
+        <tr>
+            <td>flex-end</td>
+            <td>弹性盒子从终点开始依次排列</td>
+        </tr>
+    </table>
+    <h4>stretch：</h4>
+    <p>!!! 父级弹性容器不能有高度的设置！！！</p>
+    <div class="box1">
+        <div>Stretch</div>
+        <div>Stretch</div>
+        <div>Stretch</div>
+    </div>
+    <h4>center：</h4>
+    <div class="box2">
+        <div>Center</div>
+        <div>Center</div>
+        <div>Center</div>
+    </div>
+    <h4>flext-start</h4>
+    <div class="box3">
+        <div>flex-start</div>
+        <div>flex-start</div>
+        <div>flex-start</div>
+    </div>
+    <h4>flex-end</h4>
+    <div class="box4">
+        <div class="d1">align-self: center</div>
+        <div>flex-end</div>
+        <div>flex-end</div>
+    </div>
+</body>
+</html>
